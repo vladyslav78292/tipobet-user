@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html,
+h1,
+body,
+h2,
+h3,
+h4,
+h5,
+h6,
+table,
+tr,
+td,
+th,
+ol,
+button,
+p,
+a,
+ul,
+li,
+img {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Cabin', sans-serif;
+}
+
+
+.header {
+	position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: white;
+	padding: 10px calc((100% - 1170px) / 2);
+	z-index: 25;
+  -webkit-box-shadow: 0 4px 6px -6px #222;
+  -moz-box-shadow: 0 4px 6px -6px #222;
+  box-shadow: 0 4px 7px -4px #222;
+}
+
+.header__logo {
+	min-width: 170px;
+	width: 100%;
+	max-height: 78px;
+	color: #fff;
+  text-align: center;
+  display: flex;
+	align-items: center;
+	justify-content: center;
+  width: 100%;
+}
+
+
+.header__menu {
+	position: relative;
+	width: 100%;
+}
+
+.header__logo-image {
+	width: 250px;
+}
+
+.header__menu ul {
+	width: 100%;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	margin-bottom: -20px;
+}
+
+.header__menu ul li:first-child {
+	margin-left: 0;
+}
+
+.header__menu ul li a {
+	background-color: #119F4C;
+}
+
+.header__menu ul li a,
+.header__menu ul li span {
+	font-size: 14px;
+	padding: 10px 15px;
+	color: black;
+	text-decoration: none;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.header__menu ul li a:hover,
+.header__menu ul li span:hover {
+	color: #affc80;
+}
+
+.header__menu ul li.current-menu-item span {
+	color: #affc80;
+}
+
+.header__menu ul li {
+	position: relative;
+	margin: 0 10px 20px;
+}
+
+.main {
+	margin-top: 128px;
+  margin-bottom: 60px;
+	margin-left: 244px;
+	margin-right: 224px;
+}
+
+.main__paragraph {
+	line-height: 32px;
+	margin-top: 30px;
+	font-size: 18px;
+}
+
+.main__paragraph--first {
+	margin-top: 0;
+}
+
+
+.table {
+  display: flex;
+  flex-direction: column;
+  background-color: #2B3B4B;
+  color: white;
+  margin-top: 34px;
+	overflow: auto;
+}
+
+.table-row:last-of-type {
+	border-bottom: none;
+}
+
+.table-row {
+	min-width: 680px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  border-bottom: 1px solid #fff;
+}
+
+.table-title {
+  padding: 8px 0;
+  padding-left: 10px;
+	width: 200px;
+  font-size: 18px;
+}
+
+.first-table-title {
+  width: 205px;
+}
+
+.table-title-container {
+  border-right: 1px solid #fff;
+  padding: 2px 0;
+}
+
+.table-description {
+  padding-left: 8px;
+  font-size: 18px;
+  padding-right: 10px;
+  font-weight: 400;
+}
+
+.table-title-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-title-description {
+  padding: 8px 0;
+  font-size: 18px;
+}
+
+@media (max-width: 1200px) {
+	.header {
+		padding: 10px 20px;
+	}
+
+  .main {
+		margin-top: 128px;
+		margin-left: 116px;
+		margin-right: 99px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.header__logo {
+		justify-content: center;
+	}
+
+  .main {
+		margin-top: 180px;
+	}
+
+  .header {
+    height: 150px;
+    align-items: start;
+		flex-wrap: wrap;
+	}
+
+	.header__menu {
+		max-width: 100%;
+	}
+
+  .header__menu ul {
+		justify-content: center;
+	}
+
+  .header__menu ul li {
+		margin: 0 45px;
+		height: 35px;
+		line-height: 35px;
+	}
+}
+
+@media (max-width: 768px) {
+	.header__menu {
+		min-height: 50px;
+	}
+
+  .header__menu ul {
+		display: inline-flex;
+		align-items: center;
+		padding-bottom: 20px;
+		flex-direction: column;
+		transition: all 0.3s linear;
+	}
+
+  .header {
+		justify-content: center;
+    align-items: center;
+    height: auto;
+    flex-wrap: nowrap;
+	}
+
+  .main {
+    margin-top: 128px;
+		margin-left: 16px;
+		margin-right: 16px;
+		margin-bottom: 80px;
+	}
+
+  .header__logo {
+    width: 270px;
+  }
+
+  .header__menu ul, .header__menu {
+		width: 125px;
+	}
+	.header__menu ul li {
+		margin: 0 0 5px !important;
+		text-align: center;
+		height: auto;
+	}
+}
+
+@media (max-width: 720px) {
+	.header__logo-image {
+		width: 150px;
+		height: 67px;
+	}
+
+  .main {
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 80px;
+  }
+}
